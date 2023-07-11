@@ -3,6 +3,10 @@ This web app shows quotes from famous people in the history.
 
 
 
+https://github.com/mustafa-ersoy/Quote_Time/assets/63475020/729ed265-ed7a-4ff5-aeab-b058182e25b1
+
+
+
 
 Features:
 - Users can register and log in via their user name and password
