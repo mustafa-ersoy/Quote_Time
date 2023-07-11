@@ -3,7 +3,8 @@ This web app shows quotes from famous people in the history.
 
 
 
-https://github.com/mustafa-ersoy/Quote_Time/assets/63475020/729ed265-ed7a-4ff5-aeab-b058182e25b1
+https://github.com/mustafa-ersoy/Quote_Time/assets/63475020/7488fead-b747-43b9-8f48-c7754bedd86d
+
 
 
 
@@ -11,7 +12,7 @@ https://github.com/mustafa-ersoy/Quote_Time/assets/63475020/729ed265-ed7a-4ff5-a
 Features:
 - Users can register and log in via their user name and password
 - The web app shows quote cards which contains quote, image, previous average rating, rating buttons, years
-- Users can rate the quote, see the average of previous ratings
+- Users can rate the quote and see the average of previous ratings
 - Users can suggest new quotes and give feedback
 - User will not see a quote again if he/she rated it before
 - There is light and dark mode
