@@ -1,0 +1,39 @@
+<%- include('header') %>
+<div class="account-div-1">
+    <div class="account-div-2 row">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr>
+                    <td><h1>Username:</h1></td>
+                    <td><h1><%=username%></h1></td>
+                </tr>
+                <tr>
+                    <td><h1>Member Since:</h1></td>
+                    <td><h1><%=date%></h1></td>
+                </tr>
+                <tr>
+                    <td><h1>Posts seen:</h1></td>
+                    <td><h1><%=seen%></h1></td>
+                </tr>
+                <tr>
+                    <td><h1>Posts suggested:</h1></td>
+                    <td><h1><%=suggested%></h1></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="account-div-3 row">
+        <div class="col col-6">
+            <form action="/feedback" method="get">
+                <button class="btn btn-success btn-lg" style="margin: 0 10% 0 auto;">Give feedback</button>
+            </form>
+        </div>
+        <div class="col col-6" style="text-align: left;">
+            <form action="/logout" method="get">
+                <button class="btn btn-danger btn-lg" style="margin: 0 auto 0 10%;">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') %>

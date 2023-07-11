@@ -1,0 +1,248 @@
+body{
+  background-size: cover;
+  height: max(100vh, 700px);
+  overflow: auto;
+}
+/*LOGIN and REGISTRATION SPECIFIC STYLES*/
+
+.login-div-1{
+  height: 100%;
+  background-image: url('/images/authors.jpg');
+  background-size: cover;
+  background-position: center top;
+  animation: moveBackground 40s linear infinite;
+}
+.login-div-2 {
+  position: relative;
+  top: 10%;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+.login-div-2 > h1{
+  font-family: 'Rubik', 'sans-serif';
+  margin-bottom: 12%;
+}
+.appear-text {
+  opacity: 0;
+  animation: appear 10s forwards;
+}
+
+.form-control {
+    box-shadow: 1px 1px 1px 1px black;
+    border: px solid black;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.main {
+    width: 70%;
+    margin: 5% auto 0 auto;
+}
+.image img{
+    margin-top: 3%;
+    width: 90%;
+    border-radius: 50px;
+}
+.content {
+    background-color:rgb(65, 240, 211);
+    background-image: linear-gradient(to top right, #c33838, #c72dea5d);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: auto;
+}
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote div{
+    width: 90%;
+    text-align: center;
+}
+.quote div p{
+    font-family: 'Kalam', cursive;
+    font-size: 32px;
+}
+.dark-body{
+    background-image: linear-gradient(to bottom right, #342e33, #342e33);
+}
+.white-body{
+  background-image: linear-gradient(to bottom right, #daabdf, #60cde3);
+}
+
+.date, .name {
+    text-align: center;
+    margin: 15px;
+}
+.rating1{
+    background-color: rgb(117, 47, 196);
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.rating1 > * {
+    margin-top: 15px;
+}
+.image>div>p {
+    font-family: Bree Serif, serif;
+    font-size: 24px;
+}
+.score {
+    font-family: Anton, sans-serif;
+    font-size: 40px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  .rating > form > input {
+    display: none;
+  }
+  
+  .rating > form > label:before {
+    content: '\2605'; /* Unicode star symbol */
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .rating > form > input:checked ~ label:before {
+    color: gold;
+  }
+  .rating > form > label:hover:before {
+    color: gold;
+  }
+
+  @media (max-width: 768px) {
+    /* Large screens */
+    .quote > div > p{
+      font-size: 20px; /* Adjust the font size as needed */
+    }
+    .image>div>p{
+        font-size: 20px;
+    }
+  }
+
+  .suggest-div-2 {
+    width: 60%;
+    min-width: 420px;
+    
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+    letter-spacing: .1em;
+    animation: typing 4s steps(120);
+    visibility: hidden;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+.dark-nav{
+    background-image: linear-gradient(to right, rgb(4, 45, 45), rgb(86, 99, 99));
+}
+.dark-nav *{
+    color: white;
+}
+  nav{
+    background-image: linear-gradient(to right, rgb(22, 133, 133), aqua);
+  }
+footer {
+    position: absolute;
+    top: max(95vh, 670px);
+    height: max(5vh, 30px);
+    width: 100%;
+    text-align: center;
+  }
+
+  .white-f{
+    background-color: rgb(11, 205, 205);
+    top: max(95vh, 670px);
+    height: max(5vh, 30px);
+  }
+  .dark-f{
+    background-color: rgb(4, 45, 45);
+    color: white;
+    top: max(95vh, 670px);
+    height: max(5vh, 30px);
+  }
+  .suggest {
+    display: flex;
+    align-items: center;
+  }
+
+  .account-div-2{
+    margin: 10% auto 0 auto;
+    width: min(80%, 600px);
+    min-width: 420px;
+  }
+  
+  .account-div-3{
+    margin: 3% auto 0 auto;
+    text-align: right;
+  }
+  td > h1 {
+    font-size: 30px;
+  }
+  
+  table {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+.dark{
+  color:white
+}
+.white{color:black}
+
+/*ALL ANIMATIONS ARE BELOW*/
+
+
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center calc(100% - 120vh);
+  }
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+  }
+}

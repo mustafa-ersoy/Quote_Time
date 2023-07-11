@@ -1,0 +1,55 @@
+<%- include('header') %>
+
+    <div class="main">
+        <div class="content row">
+            <div class="quote col-6 col-md-8">
+                <div>
+                    <p> <%=quote%> </p>
+                </div>
+            </div>
+            <div class="image col-6 col-md-4" style="text-align: center;">
+                <img src="authors/<%=owner%>.jpg" alt="quote owner">
+                <div>
+                    <p class="name"><%=name%></p>
+                    <p class="date"><%=birth%>-<%=death%></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rating1 row">
+            <div class="score col-12 col-sm-3"><p><%=score%> ⭐</p></div>
+            <div class="rate col-12 col-sm-6">
+                <div class="rating">
+                    <form id="rateForm" action="/rate" method="POST">
+                        <input type="hidden" name="renderId" value="<%=renderId%>">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"></label>
+                    </form>
+                </div>
+            </div>
+            <div class="skip col-12 col-sm-3">
+                <form id="skipform" action="/rate" method="POST">
+                    <button id="skip" type="submit" class="btn btn-secondary btn-lg">Skip</button>
+                    <input type="hidden" id="star1" name="rating" value="0">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        const skip = document.querySelector('#skip');
+        radioButtons.forEach(function(radioButton) {
+            radioButton.addEventListener('click', function() {
+            document.getElementById('rateForm').submit();
+  });
+});
+    </script>
+<%- include('footer') %>

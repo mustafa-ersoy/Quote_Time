@@ -1,0 +1,16 @@
+<%- include('header') %>
+<div class="suggest-div-1">
+    <div class="suggest-div-2">
+        <div class="<%=themecolor%>">
+            <h1 class="typing-text" style="margin-top: 10vh;">SHARE YOUR FEEDBACK</h1>
+            <p class="typing-text" style="animation-delay: 3s;">For us to serve you better</p>
+        </div>
+        <div style="margin-top: 5vh;">
+            <form action="/feedback" method="POST">
+                <textarea style="border-radius: 15px; max-width: 80%;" name="feedback" id="quote" cols="50" rows="10" placeholder="Quote" required></textarea><br>
+                <button style="margin-top: 20px;" class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%-include('footer')%>
